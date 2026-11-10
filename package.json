@@ -1,6 +1,6 @@
 {
   "name": "@dbreitel/char-breakdown",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Count characters in a string, broken down by alpha, numeric and other",
   "type": "module",
   "exports": "./index.js",
