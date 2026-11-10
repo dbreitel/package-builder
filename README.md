@@ -53,13 +53,9 @@ Each character is classified by its first code point using the Unicode `\p{L}` (
 
 ## Releasing
 
-Bump `version` in `package.json`, commit, then push a matching tag:
+In GitHub: **Actions → Publish → Run workflow**, keep `main` selected, pick `patch`, `minor` or `major`.
 
-```sh
-git tag v1.0.1 && git push origin v1.0.1
-```
-
-The `Publish` workflow runs the tests and publishes to GitHub Packages. It fails if the tag doesn't match the `package.json` version.
+The workflow runs the tests, bumps `package.json`, commits and tags the release on `main`, then publishes to GitHub Packages. Pull afterwards to get the bump commit locally.
 
 ## License
 
