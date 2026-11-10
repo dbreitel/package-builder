@@ -1,5 +1,5 @@
 {
-  "name": "char-breakdown",
+  "name": "@dbreitel/char-breakdown",
   "version": "1.0.0",
   "description": "Count characters in a string, broken down by alpha, numeric and other",
   "type": "module",
@@ -8,5 +8,7 @@
   "engines": { "node": ">=18" },
   "scripts": { "test": "node --test" },
   "keywords": ["count", "characters", "alpha", "numeric", "unicode"],
-  "license": "MIT"
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/dbreitel/package-builder.git" },
+  "publishConfig": { "registry": "https://npm.pkg.github.com" }
 }
