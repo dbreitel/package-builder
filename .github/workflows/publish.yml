@@ -3,6 +3,7 @@ name: Publish
 on:
   push:
     tags: ['v*']
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -23,6 +24,7 @@ jobs:
           registry-url: https://npm.pkg.github.com
       - name: Check tag matches package.json version
         run: |
+          [ "$GITHUB_REF_TYPE" = "tag" ] || { echo "Select a tag (e.g. v1.0.0) in 'Use workflow from', not a branch"; exit 1; }
           v=$(node -p "require('./package.json').version")
           [ "v$v" = "$GITHUB_REF_NAME" ] || { echo "Tag $GITHUB_REF_NAME != package.json v$v"; exit 1; }
       - run: npm test
